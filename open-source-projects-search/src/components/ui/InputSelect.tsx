@@ -1,11 +1,13 @@
 import Select from 'react-select'
 import styled from 'styled-components';
 
-export const InputSelect = ({ label, optionValues }) => {
+export const InputSelect = ({ label, placeholder, optionValues }) => {
     return (
         <InputSelectStyled>
             <p>{label}</p>
-            <Select options={optionValues} />
+            <Select
+                options={optionValues}
+                placeholder={placeholder} />
         </InputSelectStyled>
     )
 }
