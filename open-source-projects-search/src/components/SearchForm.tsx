@@ -22,15 +22,15 @@ export const SearchForm = () => {
         <SearchFormStyled action="">
             <div className="inputs-container">
                 <InputSelect
-                    label="technology-languages"
+                    label="Technology Languages"
                     optionValues={technoOptions}
                 />
                 <InputSelect
-                    label="tags"
+                    label="Tags"
                     optionValues={tagsOptions}
                 />
                 <InputSelect
-                    label="spoken-languages"
+                    label="Spoken Languages"
                     optionValues={spokenOptions}
                 />
             </div>
@@ -42,9 +42,11 @@ export const SearchForm = () => {
 }
 
 const SearchFormStyled = styled.form`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
+    .inputs-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
 `;
