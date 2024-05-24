@@ -1,3 +1,4 @@
+import styled from "styled-components"
 import { InputSelect } from "./ui/InputSelect"
 
 export const SearchForm = () => {
@@ -39,3 +40,11 @@ export const SearchForm = () => {
         </SearchFormStyled>
     )
 }
+
+const SearchFormStyled = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+`;
