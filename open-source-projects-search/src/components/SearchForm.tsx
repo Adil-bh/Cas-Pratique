@@ -50,7 +50,7 @@ export const SearchForm = () => {
                     placeholder={spokenConfig.placeholder}
                 />
             </div>
-            <div>
+            <div className="button-container">
                 <button>Search</button>
             </div>
         </SearchFormStyled>
@@ -64,5 +64,11 @@ const SearchFormStyled = styled.form`
         justify-content: center;
         align-items: center;
         gap: 15px;
+    }
+
+    .button-container {
+        justify-content: center;
+        display: flex;
+        margin: 40px 0;
     }
 `;
