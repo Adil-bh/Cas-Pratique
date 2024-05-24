@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { InputSelect } from "./ui/InputSelect"
+import { Button } from "./ui/Button"
 
 export const SearchForm = () => {
     const technoConfig = {
@@ -51,7 +52,10 @@ export const SearchForm = () => {
                 />
             </div>
             <div className="button-container">
-                <button>Search</button>
+                <Button label={"Search"} />
+            </div>
+            <div>
+                <Button label={"Romain"} />
             </div>
         </SearchFormStyled>
     )
@@ -70,27 +74,5 @@ const SearchFormStyled = styled.form`
         justify-content: center;
         display: flex;
         margin: 40px 0;
-
-        button {
-            min-width: 250px;
-            height: 60px;
-            background: #000;
-            border: solid 1px #000;
-            border-radius: 5px;
-            color: #FFF;
-            font-family: 'Josefin Sans';
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        button:hover {
-            background: #FFF;
-            color: #000;
-            cursor: pointer;
-        }
-
-        button:active {
-            border-width: 2px
-        }
     }
 `;
