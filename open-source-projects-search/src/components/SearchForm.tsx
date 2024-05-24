@@ -1,9 +1,22 @@
 import { InputSelect } from "./ui/InputSelect"
 
 export const SearchForm = () => {
-    const technoOptions = ["javascript", "php", "python"]
-    const tagsOptions = ["foot", "moto", "histoire"]
-    const spokenOptions = ["français", "spanish", "english"]
+    const technoOptions = [
+        { value: "javascript", label: "Javascript" },
+        { value: "php", label: "PHP" },
+        { value: "python", label: "Python" }
+    ]
+    const tagsOptions = [
+        { value: "foot", label: "foot" },
+        { value: "moto", label: "moto" },
+        { value: "histoire", label: "histoire" }
+    ]
+    const spokenOptions = [
+        { value: "français", label: "français" },
+        { value: "spanish", label: "spanish" },
+        { value: "english", label: "english" }
+    ]
+
     return (
         <form action="">
             <div>
