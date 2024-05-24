@@ -18,27 +18,24 @@ export const SearchForm = () => {
     ]
 
     return (
-        <form action="">
-            <div>
+        <SearchFormStyled action="">
+            <div className="inputs-container">
                 <InputSelect
-                    name="technology-languages"
-                    id="technology-languages"
+                    label="technology-languages"
                     optionValues={technoOptions}
                 />
                 <InputSelect
-                    name="tags"
-                    id="tags"
+                    label="tags"
                     optionValues={tagsOptions}
                 />
                 <InputSelect
-                    name="spoken-languages"
-                    id="spoken-languages"
+                    label="spoken-languages"
                     optionValues={spokenOptions}
                 />
             </div>
             <div>
                 <button>Search</button>
             </div>
-        </form>
+        </SearchFormStyled>
     )
 }
