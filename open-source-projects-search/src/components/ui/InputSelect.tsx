@@ -7,7 +7,8 @@ export const InputSelect = ({ label, placeholder, optionValues }) => {
             <p>{label}</p>
             <Select
                 options={optionValues}
-                placeholder={placeholder} />
+                placeholder={placeholder}
+            />
         </InputSelectStyled>
     )
 }
@@ -32,9 +33,16 @@ const InputSelectStyled = styled.div`
     [class$="-indicatorSeparator"] {
         display: none;
     }
+
+    [class$="-placeholder"],
+    [class$="-menu"],
+    [class$="-singleValue"],
+    [class$="-Input2"] {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 20px;
+    }
     
     [class$="-placeholder"] {
-        font-family: "Josefin Sans", sans-serif;
         color: rgba(0,0,0,.5);
     }
 
