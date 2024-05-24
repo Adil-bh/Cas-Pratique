@@ -1,10 +1,6 @@
-export const InputSelect = ({ name, id, optionValues }) => {
-    const toCapitalize = (string) => {
-        let newString = string
-        newString[0].toUpperCase()
+import { toCapitalize } from "../../utils/strings"
 
-        return newString
-    }
+export const InputSelect = ({ name, id, optionValues }) => {
     return (
         <div>
             <select name={name} id={id}>

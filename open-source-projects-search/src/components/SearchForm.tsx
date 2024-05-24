@@ -22,20 +22,6 @@ export const SearchForm = () => {
                     id="spoken-languages"
                     optionValues={spokenOptions}
                 />
-                <div>
-                    <select name="tags" id="tags">
-                        <option value="foot">foot</option>
-                        <option value="moto">moto</option>
-                        <option value="histoire">histoire</option>
-                    </select>
-                </div>
-                <div>
-                    <select name="spoken-languages" id="spoken-languages">
-                        <option value="français">Français</option>
-                        <option value="spanish">Spanish</option>
-                        <option value="english">English</option>
-                    </select>
-                </div>
             </div>
             <div>
                 <button>Search</button>
