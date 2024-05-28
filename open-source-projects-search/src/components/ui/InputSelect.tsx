@@ -5,7 +5,8 @@ export const InputSelect = ({ label, placeholder, optionValues }) => {
     return (
         <InputSelectStyled>
             <p>{label}</p>
-            <Select
+            <SelectStyled
+                classNamePrefix={'Select'}
                 options={optionValues}
                 placeholder={placeholder}
             />
@@ -19,34 +20,52 @@ const InputSelectStyled = styled.div`
         font-size: 14px;
         font-weight: 600;
     }
+`;
 
-    [class$="-control"] {
+const SelectStyled = styled(Select)`
+  .Select__control {
         min-width: 250px;
         height: 60px;
         border-color: #000;
     }
     
-    [class$="-ValueContainer2"] {
+    .Select__control--is-focused,
+    .Select__control--is-focused:hover {
+        border-color: #000;
+        box-shadow: none;
+        border-width: 2px;
+    }
+    
+    .Select__value-container {
         padding-left: 10px;
     }
     
-    [class$="-indicatorSeparator"] {
+    .Select__indicatorSeparator {
         display: none;
     }
 
-    [class$="-placeholder"],
-    [class$="-menu"],
-    [class$="-singleValue"],
-    [class$="-Input2"] {
+    .Select__placeholder,
+    .Select__menu,
+    .Select__single-value,
+    .Select__input {
         font-family: "Josefin Sans", sans-serif;
         font-size: 20px;
     }
     
-    [class$="-placeholder"] {
+    .Select__placeholder,
+    .Select__value-indicator-container {
         color: rgba(0,0,0,.5);
     }
 
-    [class$="-indicatorContainer"] {
-        color: rgba(0,0,0,.5);
+    .Select__input-container,
+    .Select__placeholder {
+        outline: none;
+    }
+
+    .Select__menu {
+        top: 82%;
+        border-radius: 0 0 5px 5px;
+        box-shadow: none;
+        border: solid 2px #000;
     }
 `;
