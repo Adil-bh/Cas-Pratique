@@ -1,6 +1,9 @@
 import styled from "styled-components"
-
-export const Button = ({ label, onClick }) => {
+type ButtonProps = {
+    label: string,
+    onClick: () => void
+}
+export const Button = ({ label, onClick }: ButtonProps) => {
     return (
         <ButtonStyled onClick={onClick}>{label}</ButtonStyled>
     )

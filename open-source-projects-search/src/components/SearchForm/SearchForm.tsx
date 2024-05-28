@@ -3,6 +3,8 @@ import { InputSelect } from "../ui/InputSelect"
 import { Button } from "../ui/Button"
 import { selectsConfig } from "./utils/selectsConfig"
 
+
+
 export const SearchForm = () => {
     const handleSubmit = () => {
         console.log("Done")

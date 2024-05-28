@@ -1,7 +1,18 @@
 import Select from 'react-select'
 import styled from 'styled-components';
 
-export const InputSelect = ({ label, placeholder, optionValues }) => {
+type InputSelectProps = {
+    label: string,
+    placeholder: string,
+    optionValues: selectOptions[]
+}
+
+type selectOptions = {
+    value: string;
+    label: string;
+}
+
+export const InputSelect = ({ label, placeholder, optionValues }: InputSelectProps) => {
     return (
         <InputSelectStyled>
             <p>{label}</p>
