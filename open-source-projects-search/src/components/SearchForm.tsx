@@ -3,6 +3,10 @@ import { InputSelect } from "./ui/InputSelect"
 import { Button } from "./ui/Button"
 
 export const SearchForm = () => {
+    const handleSubmit = () => {
+        console.log("Done")
+    }
+
     const technoConfig = {
         label: "Technology Languages",
         placeholder: "Javascript",
@@ -32,8 +36,9 @@ export const SearchForm = () => {
         ]
     }
 
+    /**Affichage */
     return (
-        <SearchFormStyled action="">
+        <SearchFormStyled>
             <div className="inputs-container">
                 <InputSelect
                     label={technoConfig.label}
@@ -52,10 +57,7 @@ export const SearchForm = () => {
                 />
             </div>
             <div className="button-container">
-                <Button label={"Search"} />
-            </div>
-            <div>
-                <Button label={"Romain"} />
+                <Button label={"Search"} onClick={handleSubmit} />
             </div>
         </SearchFormStyled>
     )
