@@ -37,8 +37,8 @@ const InputSelectStyled = styled.div`
 
 const SelectStyled = styled(Select)`
   .Select__control {
-        min-width: 250px;
-        height: 60px;
+        width: 250px;
+        min-height: 60px;
         border-color: #000;
     }
     
@@ -60,7 +60,8 @@ const SelectStyled = styled(Select)`
     .Select__placeholder,
     .Select__menu,
     .Select__single-value,
-    .Select__input {
+    .Select__input,
+    .Select__multi-value__label {
         font-family: "Josefin Sans", sans-serif;
         font-size: 20px;
     }
@@ -75,10 +76,35 @@ const SelectStyled = styled(Select)`
         outline: none;
     }
 
+    .Select__placeholder {
+        overflow: hidden;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+    }
+
     .Select__menu {
         top: 82%;
         border-radius: 0 0 5px 5px;
         box-shadow: none;
         border: solid 2px #000;
+    }
+    
+    .Select__multi-value__label {
+        background: #FFF;
+        padding: 4px 6px 2px;
+        border: solid 1px #000;
+        border-right: none;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .Select__multi-value__remove {
+        background: #FFF;
+        border: solid 1px #000;
+        border-left: none;
+        border-radius: 0 3px 3px 0;
+
+        &:hover {
+            background: #FFBDAD;
+        }
     }
 `;
