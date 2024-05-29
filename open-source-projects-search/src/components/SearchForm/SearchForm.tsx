@@ -21,6 +21,7 @@ export const SearchForm = () => {
                         label={select.label}
                         optionValues={select.options}
                         placeholder={select.placeholder}
+                        isMulti={select.label === "Tags"}
                     />
                 ))}
             </div>
@@ -36,7 +37,6 @@ const SearchFormStyled = styled.form`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         gap: 15px;
     }
 
