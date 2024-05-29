@@ -1,13 +1,21 @@
 import styled from "styled-components";
 import { SearchForm } from "./SearchForm/SearchForm";
-import Card from "./Card/Card";
+import Card from "./ui/Card";
+import { repositoriesConfig } from "./Card/utils/repositoriesConfig";
 
 export const Main = () => {
+
+    const repositories = repositoriesConfig
+
     return (
         <MainStyled>
             Main
             <SearchForm />
-            <Card/>
+            <div className="card-container">
+                {repositories.map((repo, index) => (
+                    <Card key={index} {...repo} />
+                ))}
+            </div>
         </MainStyled>
     )
 }
@@ -18,4 +26,12 @@ const MainStyled = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 `;

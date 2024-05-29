@@ -1,31 +1,39 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export default function Card() {
+interface CardProps {
+    stars: number;
+    title: string;
+    description: string;
+    tags: string[];
+    issues: number;
+    lastUpdated: string;
+}
+
+export default function Card({ stars, title, description, tags, issues, lastUpdated }: CardProps) {
     return (
         <CardStyled>
             <div className="container-top">
-                <div className="logo">5 ⭐️</div>
-                <h1 className="title">Repository Title</h1>
+                <div className="logo">{stars} ⭐️</div>
+                <h1 className="title">{title}</h1>
             </div>
             <hr />
             <div className="container-description">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to ....</p>
+                <p>{description}</p>
             </div>
             <hr />
             <div className="container-tag">
-                <p>javascript</p>
-                <p>php</p>
-                <p>dogs</p>
-                <p>animals</p>
-                <p>+</p>
+                {tags.map((tag, index) => (
+                    <p key={index}>{tag}</p>
+                ))}
             </div>
             <div className="container-footer">
-                <div className="issues">❗ 67 issues</div>
-                <div className="update">Updated 39min ago</div>
+                <div className="issues">❗ {issues} issues</div>
+                <div className="update">Updated {lastUpdated} ago</div>
             </div>
         </CardStyled>
-    )
+    );
 }
+
 
 // @TODO mettre container a la fin
 const CardStyled = styled.div`
