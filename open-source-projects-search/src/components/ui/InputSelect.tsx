@@ -4,7 +4,8 @@ import styled from 'styled-components';
 type InputSelectProps = {
     label: string,
     placeholder: string,
-    optionValues: selectOptions[]
+    optionValues: selectOptions[],
+    isMulti: boolean
 }
 
 type selectOptions = {
@@ -12,7 +13,7 @@ type selectOptions = {
     label: string;
 }
 
-export const InputSelect = ({ label, placeholder, optionValues }: InputSelectProps) => {
+export const InputSelect = ({ label, placeholder, optionValues, isMulti }: InputSelectProps) => {
     return (
         <InputSelectStyled>
             <p>{label}</p>
@@ -20,6 +21,7 @@ export const InputSelect = ({ label, placeholder, optionValues }: InputSelectPro
                 classNamePrefix={'Select'}
                 options={optionValues}
                 placeholder={placeholder}
+                isMulti={isMulti}
             />
         </InputSelectStyled>
     )
