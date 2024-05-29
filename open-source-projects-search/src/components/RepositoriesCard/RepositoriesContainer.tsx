@@ -6,7 +6,8 @@ import { repositoriesConfig } from "./utils/repositoriesConfig";
 export default function RepositoriesContainer() {
     const repositories = repositoriesConfig;
     // vider le state car on doit commencer avec tout les repo
-    const [filter, setFilter] = useState("php");
+    // rajouter le setFilter
+    const [filter] = useState("php");
 
     // Filtrer la fakeData en fonction du tag déclarer à php
     // onClick={setFilter(filteredRepositories)}
