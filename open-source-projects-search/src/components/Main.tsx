@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { SearchForm } from "./SearchForm/SearchForm";
 import { Title } from "./ui/Title";
+import RepositoriesContainer from "./RepositoriesCard/RepositoriesContainer";
 
 export const Main = () => {
+
     return (
         <MainStyled>
-            Main
             <Title />
             <SearchForm />
+            <RepositoriesContainer />
         </MainStyled>
     )
 }
